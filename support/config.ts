@@ -6,9 +6,9 @@ const browserOptions: LaunchOptions = {
     'media.navigator.streams.fake': true,
     'media.navigator.permission.disabled': true,
   },
-};
+}
 
 export const config = {
   browser: process.env.BROWSER || 'chromium',
   browserOptions,
-};
+}
