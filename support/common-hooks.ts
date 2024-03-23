@@ -13,15 +13,15 @@ import { After, AfterAll, Before, BeforeAll, setDefaultTimeout } from '@cucumber
 let browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser
 setDefaultTimeout(process.env.PWDEBUG ? -1 : 60 * 1000)
 BeforeAll(async function () {
-  switch (config.browser) {
+  switch (process.env.BROWSER) {
     case 'firefox':
-      browser = await firefox.launch(config.browserOptions);
+      browser = await firefox.launch(config.browserOptions)
       break;
     case 'webkit':
-      browser = await webkit.launch(config.browserOptions);
+      browser = await webkit.launch(config.browserOptions)
       break;
     default:
-      browser = await chromium.launch(config.browserOptions);
+      browser = await chromium.launch(config.browserOptions)
   }
 });
 Before(async function(this: ICustomWorld) {
