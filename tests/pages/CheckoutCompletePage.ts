@@ -9,7 +9,7 @@ export class CheckoutCompletePage {
     this.checkoutCompleteContainer = page.locator('id=checkout_complete_container')
 
 }
-returnCheckoutCompleteContainer(){
-    return this.checkoutCompleteContainer
+async returnCheckoutCompleteContainer(){
+    return await this.checkoutCompleteContainer.innerText()
 }
 }
