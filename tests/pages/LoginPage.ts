@@ -24,8 +24,7 @@ async clickLoginButton(){
     await this.loginButton.click()
 }
 
-
-  async goto(url: string) {
+async goto(url: string) {
     await this.page.goto(url)
   }
 }
