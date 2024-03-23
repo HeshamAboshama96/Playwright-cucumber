@@ -2,7 +2,7 @@ import { LoginPage } from '../../tests/pages/LoginPage'
 import { ICustomWorld } from '../../support/custom-world'
 import { Given, When } from '@cucumber/cucumber'
 
-Given('Go to home page', async function (this: ICustomWorld) {
+Given('Go to home page', async function () {
   const loginPage = new LoginPage(this.page!)
   await loginPage.goto('https://www.saucedemo.com/')
 })
