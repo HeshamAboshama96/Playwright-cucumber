@@ -7,7 +7,7 @@ Given('Go to home page', async function (this: ICustomWorld) {
   await loginPage.goto('https://www.saucedemo.com/')
 })
 
-When('Login by username: {string} and password: {string}', async function (this: ICustomWorld, username: string, password: string) {
+When('Login by username: {string} and password: {string}', async function (username: string, password: string) {
   const loginPage = new LoginPage(this.page!)
   await loginPage.fillUsername(username)
   await loginPage.fillPassword(password)
