@@ -8,7 +8,7 @@ const config = {
       '@cucumber/pretty-formatter'
     ],
     formatOptions: { snippetInterface: 'async-await' },
-    // publishQuiet: true,
+    publishQuiet: true,
   };
 
 module.exports = {
