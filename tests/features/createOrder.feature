@@ -10,7 +10,7 @@ Feature: Create an order
 		When Add all the products on the current page to the cart
 		Then Verify that the count of products in the cart, which appears above the shopping cart icon is '6'
 		When Click on shopping cart button
-        When Scroll down to the buttom then click on checkout button
+        When Scroll down to the bottom then click on checkout button
         And Fill first name by 'Hesham', last name by 'Aboshama' and postal code by '12345' then click on continue
-        And Scrol down to the buttom then click on finish button
+        And Scroll down to the buttom then click on finish button
         Then Verify that the order completion message appears correctly
