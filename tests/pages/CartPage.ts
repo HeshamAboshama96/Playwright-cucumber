@@ -1,16 +1,15 @@
-import { Locator, Page } from '@playwright/test'
+import { Locator, Page } from "@playwright/test";
 
 export class CartPage {
-  readonly page: Page
-  readonly checkoutButton: Locator
+  readonly page: Page;
+  readonly checkoutButton: Locator;
 
   constructor(page: Page) {
-    this.page = page
-    this.checkoutButton = page.locator('data-test=checkout')
-
-}
-async clickCheckoutButton(){
-  await this.checkoutButton.scrollIntoViewIfNeeded()
-    await this.checkoutButton.click()
-}
+    this.page = page;
+    this.checkoutButton = page.locator("data-test=checkout");
+  }
+  async clickCheckoutButton() {
+    await this.checkoutButton.scrollIntoViewIfNeeded();
+    await this.checkoutButton.click();
+  }
 }
