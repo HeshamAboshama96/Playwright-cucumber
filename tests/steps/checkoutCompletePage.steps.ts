@@ -7,10 +7,10 @@ Then(
   "Verify that the order completion message appears correctly",
   async function () {
     const checkoutCompletePage = new CheckoutCompletePage(this.page!);
-    expect(
+    await expect(
       await checkoutCompletePage.returnCheckoutCompleteContainer()
     ).toContain("Thank you for your order!");
-    expect(
+    await expect(
       await checkoutCompletePage.returnCheckoutCompleteContainer()
     ).toContain(
       "Your order has been dispatched, and will arrive just as fast as the pony can get there!"

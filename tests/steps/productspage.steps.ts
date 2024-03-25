@@ -22,7 +22,7 @@ Then(
   "Verify that the active option from the products sort options is {string}",
   async function (activeOption: string) {
     const productsPage = new ProductsPage(this.page!);
-    expect(productsPage.returnActiveOption()).toContainText(activeOption);
+    await expect(productsPage.returnActiveOption()).toContainText(activeOption);
   }
 );
 
@@ -30,7 +30,7 @@ Then(
   "Verify that the count of products in the cart, which appears above the shopping cart icon is {string}",
   async function (productsCount: string) {
     const productsPage = new ProductsPage(this.page!);
-    expect(productsPage.returnShoppingCartContainer()).toContainText(
+    await expect(productsPage.returnShoppingCartContainer()).toContainText(
       productsCount
     );
   }
