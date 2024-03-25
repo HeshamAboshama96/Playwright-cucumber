@@ -1,36 +1,36 @@
 name: Cucumber Playwright Tests
 
 on:
-push:
-branches:
-- main
-pull_request:
-branches:
-- main
-workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-test:
-runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-  - name: Set up Node.js
-    uses: actions/setup-node@v2
-    with:
-      node-version: 20
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
 
-  - name: Install dependencies
-    run: yarn install
+      - name: Install dependencies
+        run: yarn install
 
-  - name: Run Cucumber Playwright tests
-    run: yarn run test
+      - name: Run Cucumber Playwright tests
+        run: yarn run test
 
-  - name: Upload test results
-    if: always()
-    uses: actions/upload-artifact@v2
-    with:
-      name: test-result-report
-      path: reports/report.html
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-result-report
+          path: reports/report.html
