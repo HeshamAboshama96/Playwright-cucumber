@@ -1,8 +1,16 @@
-# cucumber-playwright
+# cucumber-playwright-Automation-Task
 
-![Test](https://github.com/Tallyb/cucumber-playwright/workflows/Test/badge.svg)
+# Description
 
-A starter repo for writing E2E tests based on Cucumber(7) with Playwright using Typescript.
+This project is an automation task that utilizes Cucumber and Playwright frameworks. It focuses on running a specific cucumber scenario that encompasses the objectives of the task.
+
+# Project Structure
+
+The project follows the Page Object Model (POM) design pattern. Here's an overview of the folder structure:
+
+- /tests/pages: Contains page classes that implement the POM pattern. These classes define locators and actions functions used in the tests.
+- /tests/steps: Contains cucumber steps files that utilize the functions declared in the page - - classes. These step files define the behavior and interactions of the application under test.
+- /tests/features: Contains feature files that describe the scenarios to be executed. These feature files utilize the steps defined in the step files to run the tests.
 
 ## Kudos
 
