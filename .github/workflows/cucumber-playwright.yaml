@@ -13,8 +13,6 @@ jobs:
 test:
 runs-on: ubuntu-latest
 
-yaml
-Copy
 steps:
   - name: Checkout code
     uses: actions/checkout@v2
