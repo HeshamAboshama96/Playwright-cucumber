@@ -10,8 +10,7 @@ export class ProductsPage {
   constructor(page: Page) {
     this.page = page;
     this.productSortContainer = page.locator(
-      "data-test=product_sort_container"
-    );
+      'data-test=product-sort-container');
     this.activeOption = page.locator(".active_option");
     this.addToCardButton = 'button:text("Add to cart")';
     this.shoppingCartContainer = page.locator("id=shopping_cart_container");
